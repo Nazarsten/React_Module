@@ -1,13 +1,17 @@
+import {Routes, Route} from "react-router-dom";
+import PostsPage from "./components/postsPage/postsPage";
 
-import './App.css';
-import Users from "./components/Users/Users";
 
 function App() {
-  return (
-    <div>
-      <Users/>
-    </div>
-  );
+    return (
+
+        <div>
+            <Routes path={'/'} element={<PostsPage/>}>
+
+            </Routes>
+        </div>
+
+    );
 }
 
 export default App;
