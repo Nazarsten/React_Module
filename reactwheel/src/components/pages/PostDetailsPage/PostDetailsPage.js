@@ -1,9 +1,13 @@
 import React from 'react';
+import {Outlet} from "react-router-dom";
 
 const PostDetailsPage = () => {
     return (
         <div>
-            PostDetailsPage
+            <div>
+                PostDetailsPage
+            </div>
+            <div><Outlet/></div>
         </div>
     );
 };
