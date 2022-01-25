@@ -16,7 +16,6 @@ const UsersPage = () => {
                 {users.map(user=><User key={user.id} user={user}/>)}
             </div>
             <div><Outlet/></div>
-
         </div>
     );
 };
