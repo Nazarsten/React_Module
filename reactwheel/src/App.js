@@ -1,14 +1,21 @@
-import {Routes, Route} from "react-router-dom";
-import PostsPage from "./components/postsPage/postsPage";
-
+import css from './App.module.css'
+import {Route,Routes,Link} from "react-router-dom";
+import UsersPage from "./components/pages/UsersPage/UsersPage";
+import PostsPage from "./components/pages/PostsPage/PostsPage";
+import Layout from "./components/Layout/Layout";
 
 function App() {
     return (
 
         <div>
-            <Routes path={'/'} element={<PostsPage/>}>
 
+            <Routes>
+                <Route path={'/'} element={<Layout/>}>
+                    <Route index element={<UsersPage/>}/>
+                    <Route path={'posts'} element={<PostsPage/>}/>
+                </Route>
             </Routes>
+
         </div>
 
     );
