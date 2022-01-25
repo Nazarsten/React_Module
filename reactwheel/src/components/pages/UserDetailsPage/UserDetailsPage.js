@@ -1,17 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import {Link, Outlet, useLocation, useParams} from "react-router-dom";
+import css from '../../styles/Users.module.css'
 
 const UserDetailsPage = () => {
     const {id} = useParams();
-    const {state:selectedUser} = useLocation();
-    const [user,setUser] = useState({});
+    const {state: selectedUser} = useLocation();
+    const [user, setUser] = useState({});
 
-    useEffect(()=>{
+    useEffect(() => {
         setUser(selectedUser)
-    },[id])
+    }, [id])
     console.log(user)
     return (
-        <div>
+        <div className={css.user}>
             <div>
                 <ul>
                     <li>id: {user.id}</li>
@@ -37,10 +38,10 @@ const UserDetailsPage = () => {
                     </li>
                 </ul>
             </div>
-            <div><Outlet/></div>
             <Link to={'posts'} state={selectedUser}>
                 <button>Posts</button>
             </Link>
+            <div><Outlet/></div>
         </div>
     );
 }

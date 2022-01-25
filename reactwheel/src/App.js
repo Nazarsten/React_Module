@@ -7,11 +7,11 @@ import PostDetailsPage from "./components/pages/PostDetailsPage/PostDetailsPage"
 import UserPostsPage from "./components/pages/UserPostsPage/UserPostsPage";
 import PostCommentsPage from "./components/pages/PostCommentsPage/PostCommentsPage";
 
+
 function App() {
     return (
 
-        <div>
-
+        <div >
             <Routes>
                 <Route path={'/'} element={<Layout/>}>
                 <Route index element={<Navigate to ={'users'}/>} />
@@ -29,7 +29,6 @@ function App() {
 
                 </Route>
             </Routes>
-
         </div>
 
     );

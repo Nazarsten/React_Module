@@ -1,0 +1,38 @@
+.post{
+    border: 1px solid aqua;
+    border-radius: 5px;
+    margin: 8px;
+    padding: 5px;
+    width: fit-content;
+}
+
+.wrap_post_and_posts{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.posts{
+
+    overflow-y: scroll;
+    height: 850px;
+    margin-top: 5px;
+    margin-left: 200px;
+    border: 1px solid aqua;
+    width: 400px;
+;
+}
+.comment{
+    border: 1px solid aqua;
+    border-radius: 5px;
+    margin: 8px;
+    padding-right: 20px;
+    width: 600px;
+}
+
+.postOne{
+    border: 1px solid aqua;
+    border-radius: 5px;
+    margin: 8px;
+    padding: 5px;
+    width: 610px;
+}
