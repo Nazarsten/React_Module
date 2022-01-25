@@ -1,8 +1,8 @@
-import css from './App.module.css'
-import {Route,Routes,Link} from "react-router-dom";
+import {Route, Routes, Link} from "react-router-dom";
+import Layout from "./components/Layout/Layout";
 import UsersPage from "./components/pages/UsersPage/UsersPage";
 import PostsPage from "./components/pages/PostsPage/PostsPage";
-import Layout from "./components/Layout/Layout";
+
 
 function App() {
     return (
@@ -11,7 +11,7 @@ function App() {
 
             <Routes>
                 <Route path={'/'} element={<Layout/>}>
-                    <Route index element={<UsersPage/>}/>
+                    <Route path={'users'} element={<UsersPage/>}/>
                     <Route path={'posts'} element={<PostsPage/>}/>
                 </Route>
             </Routes>

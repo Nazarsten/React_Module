@@ -9,3 +9,7 @@
 .header a{
     color:beige;
 }
+.header a[class='active']{
+    color: cadetblue;
+    text-decoration: none;
+}
