@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
-import {postService} from "../../../services/post.service/post.service";
-import PostCommentComponent from "../../PostCommentComponent/PostCommentComponent";
+import {postService} from "../../services/post.service/post.service";
+import PostCommentComponent from "../../components/PostCommentComponent/PostCommentComponent";
 
 const PostCommentsPage = () => {
     const [comments, setComments] = useState([]);

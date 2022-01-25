@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useParams,} from "react-router-dom";
-import {userService} from "../../../services/user.service/user.service";
-import UserPosts from "../../UserPostsComponent/UserPosts";
+import {userService} from "../../services/user.service/user.service";
+import UserPosts from "../../components/UserPostsComponent/UserPosts";
 
 
 const UserPostsPage = () => {
