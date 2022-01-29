@@ -1,11 +1,13 @@
 
-import './App.css';
-import Users from "./components/Users/Users";
+import CatAndDog from "./components/CatAndDog/CatAndDog";
+import FormComponent from "./components/Form/FormComponent";
+
 
 function App() {
   return (
     <div>
-      <Users/>
+        <FormComponent/>
+            <CatAndDog/>
     </div>
   );
 }
