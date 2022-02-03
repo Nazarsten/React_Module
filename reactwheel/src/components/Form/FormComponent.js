@@ -1,28 +1,44 @@
-import React, {useReducer} from 'react';
-import {useForm} from "react-hook-form";
+import  {useRef} from 'react';
+import React from 'react';
+import './../../App.css'
 
-const reducer=(state, action)=> {
-        switch (action.type){
-            case 'dog':return{...state,dog:state.dog}
+const FormComponent = ({dispatch}) => {
+
+    const form =(e)=>{
+        e.preventDefault();
+        e.target.reset()
     }
-}
+
+    const catInput = useRef();
+    const dogInput = useRef();
 
 
-const FormComponent = () => {
+    const saveCat=()=>{
+        dispatch({type:'cat', payload:{cat:catInput.current.value}})
+    }
 
-    const {register,handleSubmit} = useForm();
+    const saveDog=()=>{
+        dispatch({type:'dog', payload:{dog:dogInput.current.value}})
+    }
 
-    const [state, dispatch] = useReducer(reducer,{dog:''});
 
     return (
         <div>
-            <div>{state.dog}</div>
-            <form onSubmit={handleSubmit(reducer)}>
-                <div>Add dog:<input type="text" defaultValue={''}{...register('dog')}/></div>
-                <button onClick={()=>dispatch({type:'dog'})}>Add dog</button>
+            <form onSubmit={form} className={'forms'}>
+                <div>
+                    <button onClick={saveCat}>save</button>
+                    <input type="text" placeholder={'cats'} ref={catInput}/>
+                </div>
+
+                <div>
+                    <input type="text" placeholder={'dogs'} ref={dogInput}/>
+                    <button onClick={saveDog}>save</button>
+                </div>
             </form>
         </div>
     );
-};
+}
 
 export default FormComponent;
+
+
